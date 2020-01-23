@@ -1,0 +1,66 @@
+<html>
+<head>
+    
+<title>Find Hospital</title>    
+</head>
+<style>
+    body{
+       background-image: url('landscape.jpeg');
+        background-size: cover;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }   
+    .header{
+        height: 6em;
+        width: 100%;
+        background-color: purple;
+    }
+    h1{
+        color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+    .text-search{
+        padding: 15em;
+        box-sizing: border-box;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+    }
+    footer{
+        position: fixed;
+        background-color: purple;
+        height: 10em;
+    }
+    .primary{
+/*        padding: 10px;*/
+    }
+</style>
+
+<div class="container">
+    <div class="header">
+        <h1>Hospital Finder</h2>
+        
+    
+    <!-- search form -->
+        <form class="text-search" id="search_form" action="/search" method="post">
+            <input name="search_box" id="search_box" type="text" required="true" placeholder="find the hospital"/><br />
+            <input name="search_button" class="primary"
+                   id="search_button" type="submit" value="Search"/>
+           
+            
+        </form>
+    
+        <!-- end search form -->
+    </div>
+ 
+</div>
+<!--       <footer>All rights reserved @Priyadarshni Sagar</footer>-->
+    </html>

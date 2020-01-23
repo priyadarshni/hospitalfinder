@@ -1,0 +1,92 @@
+
+<html>
+    <metahttp-equiv = 'cache-control' content = 'no-cache'>
+<metahttp-equiv = 'expires' content = '0'>
+<metahttp-equiv = 'pragma' content = 'no-cache'>
+<head>
+    
+<title>Hospitals</title>    
+</head>
+<style>
+    .body{
+        background-color:antiquewhite;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }   
+    .header{
+        height: 6em;
+        width: 100%;
+        background-color: purple;
+    }
+    h1{
+        color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+    .text-search{
+        padding: 15em;
+        box-sizing: border-box;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+    }
+    footer{
+        position: fixed;
+        background-color: purple;
+        height: 10em;
+    }
+    .primary{
+/*        padding: 10px;*/
+    }
+    table{
+        width: 80%;
+        border: 4px solid grey;
+        align-content: center;
+        align:center;
+    }
+    td{
+        border: 1px solid grey;
+    }
+    th{
+        color: blueviolet;
+        font-size: 3em;
+    }
+</style>
+
+<div class="container">
+    <div class="header">
+        <h1>Hospital Finder</h2>
+    </div>
+
+
+  
+	</br>
+	</br>
+	</br>
+                <table>
+                    <tr><th>ID</th><th>Name of the Hospital</th><th>You can visit this hospital for</th><th>Description</th></tr>
+                {% for w in search_results %}
+<!--
+				<col width="40">
+				<col width="60">
+                <col width="100">
+-->
+                               
+                               <tr><td><a href="/display/{{ w['ID'] }}"> {{ w['ID'] }}</a></td>
+                              <td> {{ w['NAME'] }}</td>
+								<td> {{ w['TYPE'] }}</td>
+                    <td> {{ w['NAICS_DESC'] }}</td>
+                    </tr>
+                    
+                {% endfor %}
+            </table>
+    
+</div>
+
